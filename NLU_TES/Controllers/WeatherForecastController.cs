@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using NLU_TES.Models;
 
 namespace NLU_TES.Controllers
 {

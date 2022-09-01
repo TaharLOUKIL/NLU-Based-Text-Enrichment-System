@@ -1,4 +1,4 @@
-namespace NLU_TES
+namespace NLU_TES.Models
 {
     public class WeatherForecast
     {

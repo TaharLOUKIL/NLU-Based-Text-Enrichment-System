@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\NLU_TES",
+    "\\NLU_TES\\Properties"
   ],
-  "SelectedNode": "\\C:\\Sources\\NLU-Based text enrichment System",
+  "SelectedNode": "\\NLU_TES\\NLU_TES.csproj",
   "PreviewInSolutionExplorer": false
 }
