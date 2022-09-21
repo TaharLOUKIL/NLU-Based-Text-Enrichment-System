@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "XApeiif2cYu+5nuXS+nW1cVmPhraijPD8MBJHjoSt3Y=",
-  "Source": "NLU_TES",
-  "BasePath": "_content/NLU_TES",
+  "Hash": "RKfgwHXkB1DIWvOLrRq4jWqun4fNlHgkayyHZSS/5GU=",
+  "Source": "NLU_Aggregator",
+  "BasePath": "_content/NLU_Aggregator",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

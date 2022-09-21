@@ -6,13 +6,13 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "NLU_TES/1.0.0": {
+      "NLU_Aggregator/1.0.0": {
         "dependencies": {
           "Ocelot": "18.0.0",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
-          "NLU_TES.dll": {}
+          "NLU_Aggregator.dll": {}
         }
       },
       "FluentValidation/10.3.6": {
@@ -156,7 +156,7 @@
     }
   },
   "libraries": {
-    "NLU_TES/1.0.0": {
+    "NLU_Aggregator/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
