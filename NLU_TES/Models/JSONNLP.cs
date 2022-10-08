@@ -1,50 +1,20 @@
 ﻿// Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
 using Newtonsoft.Json;
 
-namespace JSON_NLP_SCHEMA
+namespace NLU_Aggregator.Models
 {
-    public class AdditionalProperties
+
+    public class JSONNLP
     {
+        [JsonProperty("$schema")]
+        public String? Schema { get; set; }
+
+        public String? Title { get; set; }
         public String? Type { get; set; }
-        public bool additionalProperties { get; set; }
+        public Definitions? definitions { get; set; }
         public List<String>? Required { get; set; }
-        public Properties? Properties { get; set; }
-
-        [JsonProperty("$id")]
-        public String? Id { get; set; }
-
-        public String? Description { get; set; }
-        public Items? items { get; set; }
-    }
-
-    public class AlternatePhrasing
-    {
-        public String? Type { get; set; }
-        public String? Pattern { get; set; }
-    }
-
-    public class Antonyms
-    {
-        public String? Type { get; set; }
-        public Items? items { get; set; }
-    }
-
-    public class Arcs
-    {
-        public String? Type { get; set; }
-        public String? Description { get; set; }
-        public AdditionalProperties? additionalProperties { get; set; }
-    }
-
-    public class AZ09AZ09aZAZ09
-    {
-        public String? Type { get; set; }
-        public String? Pattern { get; set; }
-    }
-
-    public class AZaZ
-    {
-        public String? Type { get; set; }
+        public bool additionalProperties { get; set; }
+        public Properties? properties { get; set; }
     }
 
     public class Binds
@@ -725,7 +695,7 @@ namespace JSON_NLP_SCHEMA
         public Tense tense { get; set; }
         public Transitivity transitivity { get; set; }
         public Negated negated { get; set; }
-        public JSONNLPModel? JsonNlp { get; set; }
+        public JSONNLP? JsonNlp { get; set; }
         public MainVerb mainVerb { get; set; }
         public Subject subject { get; set; }
         public Object @object { get; set; }
@@ -832,18 +802,7 @@ namespace JSON_NLP_SCHEMA
         public Properties properties { get; set; }
     }
 
-    public class JSONNLPModel
-    {
-        [JsonProperty("$schema")]
-        public String? Schema { get; set; }
-
-        public String? title { get; set; }
-        public String? type { get; set; }
-        public Definitions definitions { get; set; }
-        public List<String> required { get; set; }
-        public bool additionalProperties { get; set; }
-        public Properties properties { get; set; }
-    }
+  
 
     public class Root2
     {
