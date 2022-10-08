@@ -726,7 +726,7 @@ namespace NLU_Aggregator.Models
         public Meta meta { get; set; }
         public Conll conll { get; set; }
         public SentenceIds sentence_ids { get; set; }
-        public TokenList tokenList { get; set; }
+        public TokenList? tokenList { get; set; }
         public Dependencies dependencies { get; set; }
         public Coreferences coreferences { get; set; }
         public Constituents constituents { get; set; }
@@ -830,24 +830,6 @@ namespace NLU_Aggregator.Models
     {
         public String? type { get; set; }
         public List<String> examples { get; set; }
-    }
-
-    public class Subject
-    {
-        [JsonProperty("$ref")]
-        public String? Ref { get; set; }
-    }
-
-    public class Synonyms
-    {
-        public String? type { get; set; }
-        public Items? items { get; set; }
-    }
-
-    public class Synsets
-    {
-        public String? type { get; set; }
-        public AdditionalProperties additionalProperties { get; set; }
     }
 
    
