@@ -412,31 +412,6 @@ namespace NLU_Aggregator.Models
         public String? Ref { get; set; }
     }
 
-    public class Items
-    {
-        public String? type { get; set; }
-        public bool additionalProperties { get; set; }
-        public List<String> required { get; set; }
-        public Properties properties { get; set; }
-        public Items? items { get; set; }
-
-        [JsonProperty("$id")]
-        public String? Id { get; set; }
-
-        [JsonProperty("$ref")]
-        public String? Ref { get; set; }
-    }
-
-    public class Label
-    {
-        public String? type { get; set; }
-        public List<String> required { get; set; }
-        public bool additionalProperties { get; set; }
-        public Properties properties { get; set; }
-        public List<String> examples { get; set; }
-        public String? description { get; set; }
-    }
-
     public class LabeledBracketing
     {
         public String? type { get; set; }
@@ -875,55 +850,5 @@ namespace NLU_Aggregator.Models
         public AdditionalProperties additionalProperties { get; set; }
     }
 
-    public class Tense
-    {
-        public String? type { get; set; }
-        public String? pattern { get; set; }
-    }
-
-    public class Text
-    {
-        [JsonProperty("$id")]
-        public String? Id { get; set; }
-
-        public String? type { get; set; }
-        public String? description { get; set; }
-        public List<String> examples { get; set; }
-        public String? pattern { get; set; }
-    }
-
-    public class To
-    {
-        [JsonProperty("$ref")]
-        public String? Ref { get; set; }
-    }
-
-    public class TokenFrom
-    {
-        public String? type { get; set; }
-        public String? description { get; set; }
-    }
-
-    public class TokenId
-    {
-        public String? description { get; set; }
-        public String? type { get; set; }
-    }
-
-    public class TokenIdList
-    {
-        public String? type { get; set; }
-        public String? description { get; set; }
-        public int minItems { get; set; }
-        public bool uniqueItems { get; set; }
-        public Items? items { get; set; }
-    }
-
-    public class TokenIdsWithHead
-    {
-        public String? type { get; set; }
-        public bool additionalProperties { get; set; }
-        public List<String> required { get; set; }
-        public Properties properties { get; set; }
-    }
+   
 }
