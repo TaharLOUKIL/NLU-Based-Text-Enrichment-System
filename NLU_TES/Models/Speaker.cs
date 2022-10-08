@@ -5,7 +5,7 @@ namespace NLU_Aggregator.Models
     public class Speaker
     {
         public String? type { get; set; }
-        public List<String> examples { get; set; }
+        public List<String>? examples { get; set; }
     }
 
    

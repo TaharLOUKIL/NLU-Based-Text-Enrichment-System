@@ -6,7 +6,7 @@ namespace NLU_Aggregator.Models
     {
         public String? type { get; set; }
         public String? description { get; set; }
-        public List<String> examples { get; set; }
+        public List<String>? examples { get; set; }
         public String? pattern { get; set; }
     }
 }

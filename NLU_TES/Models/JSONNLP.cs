@@ -1,6 +1,7 @@
 ﻿// Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
 using Newtonsoft.Json;
 using NLU_Aggregator.Models;
+
 namespace NLU_Aggregator.Models
 {
     public class JSONNLP
@@ -14,11 +15,4 @@ namespace NLU_Aggregator.Models
         public bool additionalProperties { get; set; }
         public Properties? properties { get; set; }
     }
-
-    public class DCRights
-    {
-        public String? type { get; set; }
-    }
-
-   
 }

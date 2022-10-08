@@ -10,7 +10,7 @@ namespace NLU_Aggregator.Models
         [JsonProperty("$id")]
         public String? Id { get; set; }
 
-        public AdditionalProperties additionalProperties { get; set; }
+        public AdditionalProperties? additionalProperties { get; set; }
     }
 
    
