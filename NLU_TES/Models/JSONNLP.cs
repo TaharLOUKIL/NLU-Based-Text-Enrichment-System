@@ -926,31 +926,4 @@ namespace NLU_Aggregator.Models
         public List<String> required { get; set; }
         public Properties properties { get; set; }
     }
-
-    public class TokenList
-    {
-        [JsonProperty("$id")]
-        public String? Id { get; set; }
-
-        public String? type { get; set; }
-        public String? description { get; set; }
-        public AdditionalProperties additionalProperties { get; set; }
-    }
-
-    public class Tokens
-    {
-        public String? type { get; set; }
-
-        [JsonProperty("$ref")]
-        public String? Ref { get; set; }
-
-        public Items? items { get; set; }
-        public int minItems { get; set; }
-    }
-
-    public class TokenTo
-    {
-        public String? type { get; set; }
-        public String? description { get; set; }
-    }
 }
