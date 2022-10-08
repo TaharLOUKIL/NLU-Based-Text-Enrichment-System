@@ -3,7 +3,6 @@ using Newtonsoft.Json;
 
 namespace NLU_Aggregator.Models
 {
-
     public class JSONNLP
     {
         [JsonProperty("$schema")]
@@ -15,28 +14,6 @@ namespace NLU_Aggregator.Models
         public List<String>? Required { get; set; }
         public bool additionalProperties { get; set; }
         public Properties? properties { get; set; }
-    }
-
-    public class Binds
-    {
-        [JsonProperty("$ref")]
-        public String? Ref { get; set; }
-    }
-
-    public class CCommands
-    {
-        [JsonProperty("$ref")]
-        public String? Ref { get; set; }
-    }
-
-    public class CharacterEmbeddings
-    {
-        [JsonProperty("$id")]
-        public String? Id { get; set; }
-
-        public String? type { get; set; }
-        public String? description { get; set; }
-        public Items? items { get; set; }
     }
 
     public class CharacterOffsetBegin
@@ -801,8 +778,6 @@ namespace NLU_Aggregator.Models
         public List<String> required { get; set; }
         public Properties properties { get; set; }
     }
-
-  
 
     public class Root2
     {
