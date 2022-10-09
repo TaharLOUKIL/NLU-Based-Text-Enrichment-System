@@ -5,7 +5,7 @@ Système d'enrichissement de texte basé sur NLU
 Ce projet est généré avec le framework .Net 6 et visual studio 2022.
 
 ## Nugets requis
-Newtonsoft.Json.Schema
-RestSharp
-Swashbuckle.AspNetCore
-System.Net.Requests
+Newtonsoft.Json.Schema <br>
+RestSharp<br>
+Swashbuckle.AspNetCore<br>
+System.Net.Requests<br>
