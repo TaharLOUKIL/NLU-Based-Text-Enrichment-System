@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
 using NLU_Aggregator.Models;
@@ -9,6 +11,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Text.Json;
 
 namespace NLU_Aggregator.Controllers
 {
@@ -19,7 +22,7 @@ namespace NLU_Aggregator.Controllers
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        public JsonResult Index(string data)
+        public String Index(string data)
         {
 
             // 1. Instanciation du modèle principal
@@ -32,8 +35,8 @@ namespace NLU_Aggregator.Controllers
             string UrlAuth = "https://automation.datasphera.com/api/v1/auth/login/basic/default";
             HttpClient httpClient = new HttpClient();
             var headers = new Dictionary<string, string>();
-            string email = "contact@datasphera.com";
-            string password = "Ex@cctly123";
+            string email = "";// Email utilisateur et mot de passe ne sont pas fournit dans ce code source
+            string password = "";// ils seront communiqués directement au prof pour débogage
             headers.Add("email", email);
             headers.Add("password", password);
 
@@ -42,7 +45,7 @@ namespace NLU_Aggregator.Controllers
             var jsonToken = JObject.Parse(response);
 
 
-            // 3. extraction des intentions et similarités
+            // 3. extraction des intentions
             
             
             string UrlIntents = "automation.datasphera.com/api/v1/bots/test-bot-one/converse/123456/secured?include=nlu";
@@ -50,33 +53,15 @@ namespace NLU_Aggregator.Controllers
             headers.Add("Content-Type", "application/json");
             headers.Add("Authorization", jsonToken.ToString());
 
-           
-
-
-
-            JsonResult resultat = new JsonResult(""); // à remplacer par le Json en résultat
+                       
             response = httpClient.PostAsJsonAsync(UrlIntents, headers).Result.Content.ReadAsStringAsync().Result;
-            
-            
-            var JsonNlpEnrichi = JObject.Parse(response);
 
-            // Appel de la BotPress API avec une phrase
-            string jsonData = ""; // a mettre le retour de l'api
+            JsonNlpEnrichi? jsonNlpEnrichi = new JsonNlpEnrichi();
+            jsonNlpEnrichi = System.Text.Json.JsonSerializer.Deserialize<JsonNlpEnrichi>(response) as JsonNlpEnrichi;//JObject.Parse(response) as JsonNlpEnrichi;
 
-            if (JsonValidate(jsonData))
-            {
-                //appel de la 
-            }
-
-            //Appel de Spacy
-
-
-
-
-
-            // Renvoyer la 
-
-            return resultat;
+            var Resultat = System.Text.Json.JsonSerializer.Serialize(jsonNlpEnrichi);
+           
+            return Resultat;
            
         }
         /// <summary>

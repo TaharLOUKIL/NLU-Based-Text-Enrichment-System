@@ -1,5 +1,6 @@
 ﻿// Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
 using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 using NLU_Aggregator.Models;
 
 namespace NLU_Aggregator.Models
@@ -14,5 +15,6 @@ namespace NLU_Aggregator.Models
         public List<String>? Required { get; set; }
         public bool additionalProperties { get; set; }
         public Properties? properties { get; set; }
+
     }
 }
